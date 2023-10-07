@@ -6,6 +6,7 @@ const Navigation = () => {
     <StyledNavigation>
       <Link to={'/'}>Dashboard</Link>
       <Link to={'/offers'}>offers</Link>
+      <Link to={'/addOffer'}>Add Offer</Link>
     </StyledNavigation>
   );
 };

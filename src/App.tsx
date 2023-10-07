@@ -1,5 +1,4 @@
 import { Outlet, Route, Routes } from 'react-router-dom';
-import GenerateFilesButton from './components/GenerateFilesButton';
 import Navigation from './components/navigation/Navigation';
 import AddOffer from './views/AddOffer';
 import Home from './views/Home';
@@ -25,7 +24,7 @@ function App() {
           <Route path="/add-offer" element={<AddOffer />} />
         </Route>
       </Routes>
-      <GenerateFilesButton />
+      {/* <GenerateFilesButton /> */}
     </>
   );
 }
