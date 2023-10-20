@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { theme } from './themes';
 
 export const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Poppins:700|Poppins:400');
@@ -10,12 +11,24 @@ export const GlobalStyle = createGlobalStyle`
     --accent: #72656b;
   }
   *, *::before, *::after{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
   }
   body{
     background-color: #F6F4F4;
+  }
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+  .icon{
+    width: 1rem;
+    height: 1rem;
+    &.active{
+      fill: ${theme.colors.primary};
+    }
   }
 `;

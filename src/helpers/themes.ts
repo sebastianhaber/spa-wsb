@@ -64,6 +64,7 @@ export const theme = {
   },
   maxView: {
     menuBar: '1500px',
+    offersList: '1000px',
   },
 };
 

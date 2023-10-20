@@ -21,3 +21,20 @@ export const StyledButton = styled(Button)<ButtonProps>(({ theme }) => ({
     transform: 'scale(1.05)',
   },
 }));
+export const IconButton = styled(Button)<ButtonProps>(({ theme }) => ({
+  width: '2.25rem',
+  height: '2.25rem',
+  minWidth: 'unset',
+  borderRadius: `10px`,
+  color: `${_theme.colors.textBlack}`,
+  fontWeight: `500`,
+  fontFamily: `Poppins`,
+  textTransform: 'none',
+  fontSize: '16px',
+  transition: 'all 0.2s ease-in-out',
+
+  ':disabled': {
+    color: `${_theme.colors.textBlack}`,
+    opacity: '0.7',
+  },
+}));

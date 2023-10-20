@@ -1,20 +1,18 @@
 import { useFormik } from 'formik';
+import { useMutation } from 'react-query';
 import styled from 'styled-components';
 import * as yup from 'yup';
-import { theme } from '../../helpers/themes';
 import { Input } from '../../components/input';
 import { StyledButton } from '../../components/styledButton';
+import { theme } from '../../helpers/themes';
 import { addOffer } from '../../services/addOffer';
-import { useMutation } from 'react-query';
 
 const AddOfferForm = () => {
-  
   const AddOfferMutation = useMutation(addOffer, {
     onSuccess: (res: any) => {
       console.log('success', res);
-    }
+    },
   });
-
 
   const validation = yup.object({
     title: yup.string().required('Title is required'),
@@ -78,13 +76,10 @@ const AddOfferForm = () => {
           // recruitmentType: values.contract?.recruitmentType,
         },
       };
-      
-      AddOfferMutation.mutate(body);
-      }
 
-      
+      AddOfferMutation.mutate(body);
     },
-  );
+  });
 
   return (
     <FormWrapper>
@@ -233,7 +228,7 @@ const FormWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: ${theme.colors.cardBackground}
+  background-color: ${theme.colors.cardBackground};
 `;
 
 const FormContainer = styled.div`
