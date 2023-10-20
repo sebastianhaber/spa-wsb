@@ -1,35 +1,41 @@
-import { useEffect, useState } from 'react';
-import { useMutation } from 'react-query';
-import { getAllOffers } from '../api/api.offers';
-import { GetAllOffersResponse } from '../services/getOffers/types';
+import { useQuery } from 'react-query';
+import { useSearchParams } from 'react-router-dom';
 import styled from 'styled-components';
+import { getAllOffers } from '../api/api.offers';
+import OfferListItem from '../components/offers/OfferListItem';
+import { theme } from '../helpers/themes';
 
 const OffersPage = () => {
-  const [offers, setOffers] = useState<GetAllOffersResponse[]>([]);
+  // Tu bedzie jakies sortowanie czy cos
+  const [searchParams] = useSearchParams();
 
-  const GetAllOffersMutation = useMutation(getAllOffers, {
-    onSuccess: (data: any) => {
-      //TODO modele zamiast typów
-      console.log(data.data);
-      setOffers(data.data);
-    },
+  // const {data:offers, mutate, isLoading,isError} = useMutation(getAllOffers, {
+  //   onSuccess: (data: AxiosResponse<GetAllOffersResponse[], any>) => {
+  //     //TODO modele zamiast typów
+  //     setOffers(data.data);
+  //   },
+  // });
+  const {
+    data: offers,
+    isFetching,
+    isError,
+  } = useQuery({
+    queryKey: ['offers'],
+    queryFn: getAllOffers,
+    keepPreviousData: true,
+    refetchOnWindowFocus: false,
   });
-
-  useEffect(() => {
-    GetAllOffersMutation.mutate();
-  }, []);
 
   return (
     <RootContainer>
-      <OffersTitle>Offers</OffersTitle>
-
-      {offers.map((offer) => (
-
-        <div key={offer.id}>
-          <h1>{offer.title}</h1>
-          <p>{offer.description}</p>
-        </div>
-      ))}
+      {offers && offers.length > 0 && (
+        <OffersHeader>
+          <p>We have {offers?.length} job offers!</p>
+        </OffersHeader>
+      )}
+      {isFetching && !offers && 'Fetching offers...'}
+      {isError && 'An error has occured.'}
+      <OffersList>{offers?.map((offer) => <OfferListItem offer={offer} key={offer.id} />)}</OffersList>
     </RootContainer>
   );
 };
@@ -40,9 +46,24 @@ const RootContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: ${theme.maxView.offersList};
+  margin: 0 auto;
+  padding: 0 1rem;
+  padding-bottom: 2rem;
 `;
 
-const OffersTitle = styled.h1`
-  font-size: 24px;
-  margin-bottom: 16px;
+const OffersHeader = styled.section`
+  font-weight: ${theme.fontWeight.normal};
+  width: 100%;
+  margin: 1rem 0;
+  color: ${theme.colors.accent};
+`;
+const OffersList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  list-style: none;
+
+  width: 100%;
 `;

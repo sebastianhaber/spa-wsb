@@ -4,7 +4,7 @@ export type GetAllOffersResponse = {
   description: string;
   requirements: string[];
   responsibilities: string[];
-  validUntil: Date;
+  validUntil: string;
   whatWeOffer: string[];
   company: Company;
   contract: Contract;
@@ -18,16 +18,16 @@ export type Company = {
 };
 
 export type Contract = {
-    type: string; // uzupełnić
-    workTime: string;
-    mode: string;
-    salary: {
-      from: number;
-      to: number;
-    };
-    position: {
-      name: string;
-      level: string;
-    };
-    recruitmentType: string;
+  type: string; // uzupełnić
+  workTime: string;
+  mode: string;
+  salary: {
+    from: number;
+    to: number;
+  };
+  position: {
+    name: string;
+    level: string;
+  };
+  recruitmentType: string;
 };
