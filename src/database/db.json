@@ -4,21 +4,90 @@
       "id": 1,
       "title": "Tytuł oferty",
       "description": "opis ofertt",
-      "requirements": ["wymagania1", "wymagania2"],
-      "responsibilities": ["odpowiedzialnosc1", "odpowiedzialnosc2"],
+      "requirements": [
+        "wymagania1",
+        "wymagania2"
+      ],
+      "responsibilities": [
+        "odpowiedzialnosc1",
+        "odpowiedzialnosc2"
+      ],
       "validUntil": "20-02-2020",
-      "whatWeOffer": ["nic nie oferujemy"],
-      "company": { "id": 1, "city": "Gdańsk", "description": "opis", "name": "nazwa" },
+      "whatWeOffer": [
+        "nic nie oferujemy"
+      ],
+      "company": {
+        "id": 1,
+        "city": "Gdańsk",
+        "description": "opis",
+        "name": "nazwa"
+      },
       "contract": {
         "mode": "hybrid",
-        "salary": { "from": 10000, "to": 12000 },
+        "salary": {
+          "from": 10000,
+          "to": 12000
+        },
         "type": "contract of employment",
         "workTime": "full-time",
-        "position": { "level": "assistant", "name": "???" },
+        "position": {
+          "level": "assistant",
+          "name": "???"
+        },
         "recruitmentType": "remote"
       }
+    },
+    {
+      "title": "Testowy tytuł oferty",
+      "description": "testowy opis",
+      "requirements": "testowe wymagania",
+      "responsibilities": "testowe obowiązki",
+      "validUntil": "20-02-2023",
+      "whatWeOffer": "testowe rzeczy oferowane ",
+      "company": {
+        "city": "",
+        "description": "",
+        "name": ""
+      },
+      "contract": {
+        "mode": "",
+        "salary": {
+          "from": 0,
+          "to": 0
+        }
+      },
+      "id": 2
+    },
+    {
+      "title": "test 2 tytuł",
+      "description": "test 2 opis",
+      "requirements": "test 2 wymagania",
+      "responsibilities": "test 2 obowiązki",
+      "validUntil": "30-03-2024",
+      "whatWeOffer": "test 2 oferujemy",
+      "company": {
+        "city": "test 2 miasto firmy",
+        "description": "test 2 opis firmy",
+        "name": "test 2 nazwa firmy"
+      },
+      "contract": {
+        "mode": "test 2 tryb pracy",
+        "salary": {
+          "from": "2000",
+          "to": "20000"
+        }
+      },
+      "id": 3
     }
   ],
-  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
-  "profile": { "name": "typicode" }
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }

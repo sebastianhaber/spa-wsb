@@ -6,7 +6,7 @@ import {
 } from "axios";
 import { getAxiosClient } from "./axiosClient";
 import SessionService from "./sessionService";
-import { showError } from "../utils/error-handling";
+// import { showError } from "./utils/error-handling";
 
 const onRequest = (config: AxiosRequestConfig): AxiosRequestConfig => {
   const user = SessionService.getUser();
@@ -73,9 +73,9 @@ const onResponseError = async (error: AxiosError): Promise<AxiosError> => {
       }
     }
   }
-  if (error.response) {
-    showError(error.response);
-  }
+  // if (error.response) {
+  //   showError(error.response);
+  // }
   return Promise.reject(error);
 };
 
