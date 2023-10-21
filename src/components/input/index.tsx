@@ -1,10 +1,13 @@
-import { alpha, styled } from '@mui/material/styles';
 import TextField, { TextFieldProps } from '@mui/material/TextField';
+import { alpha, styled } from '@mui/material/styles';
 import { theme as _theme } from '../../helpers/themes';
-import { OutlinedInputProps } from '@mui/material';
 
 export const Input = styled((props: TextFieldProps) => (
-  <TextField InputProps={{ disableUnderline: true } as Partial<OutlinedInputProps>} {...props} />
+  /**
+   * Wywala błąd w konsoli
+   * <TextField autoCorrect='false' InputProps={{ disableUnderline: true } as Partial<OutlinedInputProps>} {...props} />
+   */
+  <TextField autoCorrect="false" {...props} />
 ))(({ theme }) => ({
   '& .MuiFilledInput-root': {
     // "font-size": "14px",//<<<TODO
