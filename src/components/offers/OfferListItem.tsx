@@ -69,11 +69,11 @@ const OfferListItem = ({ offer }: Props) => {
   return (
     <StyledListItem>
       <StyledOfferLink to={`${offer.id}`} className="offer-link"></StyledOfferLink>
-      <p className="valid-until">Offer valid until: {offer.validUntil.toString()}</p>
+      <p className="valid-until">Offer valid until: {new Date(offer.validUntil).toLocaleDateString('pl')}</p>
       <div className="top-info">
         <h3>{offer.title}</h3>
         <IconButton onClick={handleToggleFavourite}>
-          <StarIcon className={isFavourite ? 'icon active' : 'icon'} />
+          <StarIcon className={isFavourite ? 'icon filled' : 'icon'} />
         </IconButton>
       </div>
       <span className="salary">

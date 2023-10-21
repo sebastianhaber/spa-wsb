@@ -1,4 +1,5 @@
 import axiosInstance from '../lib/axios';
 import { GetAllOffersResponse } from '../services/getOffers/types';
 
-export const getAllOffers = () => axiosInstance.get<GetAllOffersResponse[]>('/offers').then((res) => res.data);
+export const getAllOffers = (search?: string) =>
+  axiosInstance.get<GetAllOffersResponse[]>(`/offers${search ? `?${search}` : ''}`).then((res) => res.data);

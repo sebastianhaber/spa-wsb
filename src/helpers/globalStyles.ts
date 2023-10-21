@@ -27,8 +27,21 @@ export const GlobalStyle = createGlobalStyle`
   .icon{
     width: 1rem;
     height: 1rem;
-    &.active{
+    transition: all .2s ease;
+    &.filled{
       fill: ${theme.colors.primary};
+    }
+    &.rotated{
+      transform: rotate(180deg);
+    }
+  }
+
+  .animate-spin{
+    animation: spin 1.2s linear infinite;
+  }
+  @keyframes spin {
+    to{
+      transform: rotate(360deg);
     }
   }
 `;
