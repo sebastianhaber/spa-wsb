@@ -8,6 +8,7 @@ export type GetAllOffersResponse = {
   whatWeOffer: string[];
   company: Company;
   contract: Contract;
+  createdAt: string;
 };
 
 export type Company = {
