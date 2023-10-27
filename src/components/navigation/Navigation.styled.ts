@@ -13,6 +13,7 @@ export const StyledNavigation = styled.nav`
   z-index: 10;
   background-color: ${theme.colors.background + '80'};
   backdrop-filter: blur(20px) saturate(180%);
+  padding: 0 1rem;
 `;
 export const StyledLink = styled(NavLink)`
   text-decoration: none;
