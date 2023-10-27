@@ -2,7 +2,6 @@ import { createGlobalStyle } from 'styled-components';
 import { theme } from './themes';
 
 export const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Poppins:700|Poppins:400');
   :root{
     --text: #000000;
     --background: #F6F4F4;

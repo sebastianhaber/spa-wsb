@@ -1,29 +1,19 @@
 export type AddOfferRequest = {
-
   title: string;
   description: string;
   requirements: string;
   responsibilities: string;
-  validUntil: string | Date;
+  validUntil: string | Date | null;
   whatWeOffer: string;
-  company: {
-
-    city: string;
-    description: string;
-    name: string;
+  comapnyCity: string;
+  companyDescription: string;
+  companyName: string;
+  mode: string; //'in office' | 'hybrid' | 'remote'
+  salary: {
+    from: number;
+    to: number;
   };
-  contract: {
-    mode: string;
-    salary: {
-      from: number;
-      to: number;
-    };
-    // type: string;
-    // workTime: string;
-    // position: {
-    //   level: 'assistant';
-    //   name: '???';
-    // };
-    // recruitmentType: 'remote';
-  };
+  type: string; //'contract of employment' | 'B2B'
+  workTime: string; //'part-time' | 'full-time'
+  level: string; //'assistant' | 'junior' | 'mid' | 'senior'
 };
