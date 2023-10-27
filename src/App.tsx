@@ -5,10 +5,39 @@ import Home from './views/Home';
 import OfferDetails from './views/OfferDetails';
 import OffersPage from './views/OffersPage';
 import AddOffer from './views/addOffer';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
     <>
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+        gutter={8}
+        containerClassName=""
+        containerStyle={{}}
+        toastOptions={{
+          // Define default options
+          className: '',
+          duration: 5000,
+          style: {
+            background: '#363636',
+            color: '#fff',
+          },
+
+          // Default options for specific types
+          success: {
+            duration: 3000,
+            style: {
+              marginTop: '60px',
+              background: 'ffffff',
+              color: '#000',
+              height: '60px',
+              width: '400px',
+            },
+          },
+        }}
+      />
       <Routes>
         <Route
           path="/"
