@@ -1,3 +1,4 @@
+import { Toaster } from 'react-hot-toast';
 import { Outlet, Route, Routes } from 'react-router-dom';
 import Navigation from './components/navigation/Navigation';
 import CompanyPage from './views/CompanyPage';
@@ -9,6 +10,34 @@ import OfferDetails from './views/offerDetails/OfferDetails';
 function App() {
   return (
     <>
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+        gutter={8}
+        containerClassName=""
+        containerStyle={{}}
+        toastOptions={{
+          // Define default options
+          className: '',
+          duration: 5000,
+          style: {
+            background: '#363636',
+            color: '#fff',
+          },
+
+          // Default options for specific types
+          success: {
+            duration: 3000,
+            style: {
+              marginTop: '60px',
+              background: 'ffffff',
+              color: '#000',
+              height: '60px',
+              width: '400px',
+            },
+          },
+        }}
+      />
       <Routes>
         <Route
           path="/"
@@ -23,7 +52,7 @@ function App() {
           <Route path="/offers" element={<OffersPage />} />
           <Route path="/offers/:id" element={<OfferDetails />} />
           <Route path="/add-offer" element={<AddOffer />} />
-          <Route path="/company/:id" element={<CompanyPage />} />
+          <Route path="/company/:name" element={<CompanyPage />} />
         </Route>
       </Routes>
     </>

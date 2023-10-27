@@ -69,7 +69,7 @@ const OfferListItem = ({ offer }: Props) => {
   return (
     <StyledListItem>
       <StyledOfferLink to={`${offer.id}`} className="offer-link"></StyledOfferLink>
-      <p className="valid-until">Offer valid until: {new Date(offer.validUntil).toLocaleDateString('pl')}</p>
+      <p className="valid-until">Offer valid until: {new Date(offer.validUntil || '').toLocaleDateString('pl')}</p>
       <div className="top-info">
         <h3>{offer.title}</h3>
         <IconButton onClick={handleToggleFavourite}>
@@ -77,25 +77,25 @@ const OfferListItem = ({ offer }: Props) => {
         </IconButton>
       </div>
       <span className="salary">
-        {offer.contract.salary.from === offer.contract.salary.to ? (
-          `Up to ${offer.contract.salary.from} PLN gross / month`
+        {offer.salary.from === offer.salary.to ? (
+          `Up to ${offer.salary.from} PLN gross / month`
         ) : (
           <>
-            {offer.contract.salary.from} PLN - {offer.contract.salary.to} PLN gross / month
+            {offer.salary.from} PLN - {offer.salary.to} PLN gross / month
           </>
         )}
       </span>
-      <Link to={`/company/${offer.company.id}`} className="company">
-        {offer.company.name}
+      <Link to={`/company/${offer.companyName}`} className="company">
+        {offer.companyName}
       </Link>
       <div className="job-info">
-        <span>{firstLetterUppercase(offer.contract.position.level)}</span>
+        <span>{firstLetterUppercase(offer.level)}</span>
         <span>•</span>
-        <span>{firstLetterUppercase(offer.contract.mode)}</span>
+        <span>{firstLetterUppercase(offer.mode)}</span>
         <span>•</span>
-        <span>{firstLetterUppercase(offer.contract.workTime)}</span>
+        <span>{firstLetterUppercase(offer.workTime)}</span>
         <span>•</span>
-        <span>{firstLetterUppercase(offer.contract.type)}</span>
+        <span>{firstLetterUppercase(offer.type)}</span>
       </div>
     </StyledListItem>
   );
