@@ -49,20 +49,18 @@ const AddOfferForm = () => {
     description: yup.string().required('Description is required'),
     requirements: yup.string().required('Requirements is required'),
     responsibilities: yup.string().required('Responsibilities is required'),
-    // validUntil: yup.string().required('Valid until is required'),
     whatWeOffer: yup.string().required('What we offer is required'),
-    company: yup.object({
-      name: yup.string().required('Company name is required'),
-      city: yup.string().required('Company city is required'),
-      description: yup.string().required('Company description is required'),
+    comapnyCity: yup.string().required('Company city is required'),
+    companyDescription: yup.string().required('Company description is required'),
+    companyName: yup.string().required('Company name is required'),
+    mode: yup.string().required('Mode is required'),
+    salary: yup.object({
+      from: yup.number().required('Salary from is required'),
+      to: yup.number().required('Salary to is required'),
     }),
-    contract: yup.object({
-      mode: yup.string().required('Contract mode is required'),
-      salary: yup.object({
-        from: yup.number().required('Salary from is required'),
-        to: yup.number().required('Salary to is required'),
-      }),
-    }),
+    type: yup.string().required('Type is required'),
+    workTime: yup.string().required('Work time is required'),
+    level: yup.string().required('Level is required'),
   });
 
   const formik = useFormik({
@@ -105,8 +103,8 @@ const AddOfferForm = () => {
         workTime: values.workTime,
         level: values.level,
       };
-      console.log(body);
-      // AddOfferMutation.mutate(body);
+      // console.log(body);
+      AddOfferMutation.mutate(body);
     },
   });
 
@@ -209,16 +207,26 @@ const AddOfferForm = () => {
               multiline
               rows={4}
             />
-            <Input
-              value={formik.values.mode}
-              onChange={formik.handleChange}
-              label={'Contract mode'}
-              id={'mode'}
-              name={'mode'}
-              error={formik.touched.mode && Boolean(formik.errors.mode)}
-              helperText={formik.touched.mode && formik.errors.mode}
-              onBlur={formik.handleBlur}
-            />
+            <FormControl fullWidth>
+              <InputLabel id="mode-label">Mode</InputLabel>
+              <Select
+                placeholder="Mode"
+                labelId="mode-label"
+                label="Mode"
+                id="mode"
+                name="mode"
+                value={formik.values.mode}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                style={{ backgroundColor: 'white' }}
+              >
+                {modes.map((i: any) => (
+                  <MenuItem key={i.id} value={i.name}>
+                    {i.name}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
             <Input
               value={formik.values.salary.from}
               onChange={formik.handleChange}
@@ -239,26 +247,26 @@ const AddOfferForm = () => {
               helperText={formik.touched.salary?.to && formik.errors.salary?.to}
               onBlur={formik.handleBlur}
             />
-            <Input
-              value={formik.values.type}
-              onChange={formik.handleChange}
-              label={'Type'}
-              id={'type'}
-              name={'type'}
-              error={formik.touched.type && Boolean(formik.errors.type)}
-              helperText={formik.touched.type && formik.errors.type}
-              onBlur={formik.handleBlur}
-            />
-            {/* <Input
-              value={formik.values.workTime}
-              onChange={formik.handleChange}
-              label={'Work time'}
-              id={'workTime'}
-              name={'workTime'}
-              error={formik.touched.workTime && Boolean(formik.errors.workTime)}
-              helperText={formik.touched.workTime && formik.errors.workTime}
-              onBlur={formik.handleBlur}
-            /> */}
+            <FormControl fullWidth>
+              <InputLabel id="type-label">Type</InputLabel>
+              <Select
+                placeholder="Type"
+                labelId="type-label"
+                label="Type"
+                id="type"
+                name="type"
+                value={formik.values.type}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                style={{ backgroundColor: 'white' }}
+              >
+                {types.map((i: any) => (
+                  <MenuItem key={i.id} value={i.name}>
+                    {i.name}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
             <FormControl fullWidth>
               <InputLabel id="workTime-label">Work time</InputLabel>
               <Select
