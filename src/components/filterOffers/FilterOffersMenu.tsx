@@ -62,9 +62,9 @@ const FilterOffersMenu = () => {
               <input
                 type="checkbox"
                 id="filter-workTime-fulltime"
-                name="contract.workTime=full-time"
+                name="workTime=full-time"
                 onChange={handleChange}
-                defaultChecked={getDefaultChecked('contract.workTime=full-time')}
+                defaultChecked={getDefaultChecked('workTime=full-time')}
               />
               <p>Full time</p>
             </label>
@@ -72,11 +72,11 @@ const FilterOffersMenu = () => {
               <input
                 type="checkbox"
                 id="filter-workTime-parttime"
-                name="contract.workTime=part-time"
+                name="workTime=part-time"
                 onChange={handleChange}
-                defaultChecked={getDefaultChecked('contract.workTime=part-time')}
+                defaultChecked={getDefaultChecked('workTime=part-time')}
               />
-              <p>part time</p>
+              <p>Part time</p>
             </label>
           </li>
           <li>
@@ -85,31 +85,31 @@ const FilterOffersMenu = () => {
               <input
                 type="checkbox"
                 id="filter-mode-hybrid"
-                name="contract.mode=hybrid"
+                name="mode=hybrid"
                 onChange={handleChange}
-                defaultChecked={getDefaultChecked('contract.mode=hybrid')}
+                defaultChecked={getDefaultChecked('mode=hybrid')}
               />
-              <p>hybrid</p>
+              <p>Hybrid</p>
             </label>
             <label htmlFor="filter-mode-home_office">
               <input
                 type="checkbox"
                 id="filter-mode-home_office"
-                name="contract.mode=home office"
+                name="mode=home office"
                 onChange={handleChange}
-                defaultChecked={getDefaultChecked('contract.mode=home office')}
+                defaultChecked={getDefaultChecked('mode=home office')}
               />
-              <p>home office</p>
+              <p>Home office</p>
             </label>
             <label htmlFor="filter-mode-remote">
               <input
                 type="checkbox"
                 id="filter-mode-remote"
-                name="contract.mode=remote"
+                name="mode=remote"
                 onChange={handleChange}
-                defaultChecked={getDefaultChecked('contract.mode=remote')}
+                defaultChecked={getDefaultChecked('mode=remote')}
               />
-              <p>remote</p>
+              <p>Remote</p>
             </label>
           </li>
           <li>
@@ -118,11 +118,24 @@ const FilterOffersMenu = () => {
               <input
                 type="checkbox"
                 id="filter-type-contract_of_employment"
-                name="contract.type=contract of employment"
+                name="type=contract of employment"
                 onChange={handleChange}
-                defaultChecked={getDefaultChecked('contract.type=contract of employment')}
+                defaultChecked={getDefaultChecked('type=contract of employment')}
               />
-              <p>contract of employment</p>
+              <p>Contract of employment</p>
+            </label>
+          </li>
+          <li>
+            <h3>Level</h3>
+            <label htmlFor="filter-level-assistant">
+              <input
+                type="checkbox"
+                id="filter-level-assistant"
+                name="level=assistant"
+                onChange={handleChange}
+                defaultChecked={getDefaultChecked('level=assistant')}
+              />
+              <p>Assistant</p>
             </label>
           </li>
         </ul>
