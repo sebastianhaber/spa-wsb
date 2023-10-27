@@ -39,6 +39,26 @@
       "workTime": "Part time",
       "level": "Assistant",
       "id": 2
+    },
+    {
+      "title": "hehe",
+      "description": "123",
+      "requirements": "123",
+      "responsibilities": "123",
+      "validUntil": "2023-10-27T22:00:00.000Z",
+      "whatWeOffer": "123",
+      "comapnyCity": "gdynia",
+      "companyDescription": "slaba firma",
+      "companyName": "firma",
+      "mode": "Hybrid",
+      "salary": {
+        "from": 0,
+        "to": "99999"
+      },
+      "type": "Mandate contract",
+      "workTime": "Full time",
+      "level": "Senior",
+      "id": 3
     }
   ],
   "comments": [

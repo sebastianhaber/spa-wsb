@@ -8,9 +8,9 @@ import { StyledButton } from '../styledButton';
 import ToggledList, { TListElement } from '../toggledList/ToggledList';
 
 export enum ESortBy {
-  createdAt = 'createdAt',
+  mode = 'Mode',
   validUntil = 'validUntil',
-  position = 'position',
+  level = 'Level',
 }
 
 export const getSortedByProperty = (searchParams: URLSearchParams) => {
@@ -22,8 +22,12 @@ export const getSortedByProperty = (searchParams: URLSearchParams) => {
 
 const listElements: TListElement[] = [
   {
-    label: 'Created At',
-    value: 'createdAt',
+    label: 'Mode',
+    value: 'mode',
+  },
+  {
+    label: 'Level',
+    value: 'level',
   },
   {
     label: 'Offer valid until',
@@ -45,6 +49,7 @@ const SortOffers = () => {
     setSearchParams(searchParams);
     setListOpen(false);
   };
+  console.log(sortedBy);
 
   return (
     <StyledWrapper ref={innerRef}>
