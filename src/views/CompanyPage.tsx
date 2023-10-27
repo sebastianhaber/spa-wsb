@@ -1,10 +1,8 @@
 import { useParams } from 'react-router';
 
-type Props = {};
-
-const CompanyPage = (props: Props) => {
-  const { id } = useParams();
-  return <div>CompanyPage: {id}</div>;
+const CompanyPage = () => {
+  const { name } = useParams();
+  return <div>CompanyPage: {name}</div>;
 };
 
 export default CompanyPage;
