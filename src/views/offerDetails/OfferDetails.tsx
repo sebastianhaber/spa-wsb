@@ -23,7 +23,7 @@ const OfferDetails = () => {
   return (
     <StyledOffers>
       <div className="dates">
-        <ol> Created: {offer.createdAt}</ol>
+        <ol> Created: {new Date(offer.createdAt).toLocaleDateString('pl')}</ol>
       </div>
       <div className="CompanyName">{offer.company.name}</div>
       <div className="InfoAbout">
@@ -117,7 +117,7 @@ const OfferDetails = () => {
               />
             </svg>
           </span>
-          Valid Until: {offer.validUntil}
+          Valid Until: {new Date(offer.validUntil).toLocaleDateString('pl')}
         </li>
       </div>
       <div className="Respo">
