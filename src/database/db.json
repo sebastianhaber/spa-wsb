@@ -4,16 +4,35 @@
       "id": 1,
       "title": "Tytuł oferty",
       "description": "opis ofertt",
-      "requirements": ["wymagania1", "wymagania2"],
-      "responsibilities": ["odpowiedzialnosc1", "odpowiedzialnosc2"],
-      "whatWeOffer": ["nic nie oferujemy"],
-      "company": { "id": 1, "city": "Gdańsk", "description": "opis", "name": "nazwa" },
+      "requirements": [
+        "wymagania1",
+        "wymagania2"
+      ],
+      "responsibilities": [
+        "odpowiedzialnosc1",
+        "odpowiedzialnosc2"
+      ],
+      "whatWeOffer": [
+        "nic nie oferujemy"
+      ],
+      "company": {
+        "id": 1,
+        "city": "Gdańsk",
+        "description": "opis",
+        "name": "nazwa"
+      },
       "contract": {
         "mode": "hybrid",
-        "salary": { "from": 10000, "to": 12000 },
+        "salary": {
+          "from": 10000,
+          "to": 12000
+        },
         "type": "contract of employment",
         "workTime": "full-time",
-        "position": { "level": "assistant", "name": "???" },
+        "position": {
+          "level": "assistant",
+          "name": "???"
+        },
         "recruitmentType": "remote"
       },
       "createdAt": "2023-10-15T10:56:10.364Z",
@@ -23,16 +42,35 @@
       "id": 2,
       "title": "Tytuł oferty1",
       "description": "opis ofertt",
-      "requirements": ["wymagania1", "wymagania2"],
-      "responsibilities": ["odpowiedzialnosc1", "odpowiedzialnosc2"],
-      "whatWeOffer": ["nic nie oferujemy"],
-      "company": { "id": 1, "city": "Gdańsk", "description": "opis", "name": "nazwa" },
+      "requirements": [
+        "wymagania1",
+        "wymagania2"
+      ],
+      "responsibilities": [
+        "odpowiedzialnosc1",
+        "odpowiedzialnosc2"
+      ],
+      "whatWeOffer": [
+        "nic nie oferujemy"
+      ],
+      "company": {
+        "id": 1,
+        "city": "Gdańsk",
+        "description": "opis",
+        "name": "nazwa"
+      },
       "contract": {
         "mode": "hybrid",
-        "salary": { "from": 420, "to": 2137 },
+        "salary": {
+          "from": 420,
+          "to": 2137
+        },
         "type": "contract of employment",
         "workTime": "full-time",
-        "position": { "level": "assistant", "name": "???" },
+        "position": {
+          "level": "assistant",
+          "name": "???"
+        },
         "recruitmentType": "remote"
       },
       "createdAt": "2023-10-21T10:56:10.364Z",
@@ -42,16 +80,35 @@
       "id": 3,
       "title": "Tytuł oferty333",
       "description": "opis ofertt",
-      "requirements": ["wymagania1", "wymagania2"],
-      "responsibilities": ["odpowiedzialnosc1", "odpowiedzialnosc2"],
-      "whatWeOffer": ["nic nie oferujemy"],
-      "company": { "id": 1, "city": "Gdańsk", "description": "opis", "name": "nazwa" },
+      "requirements": [
+        "wymagania1",
+        "wymagania2"
+      ],
+      "responsibilities": [
+        "odpowiedzialnosc1",
+        "odpowiedzialnosc2"
+      ],
+      "whatWeOffer": [
+        "nic nie oferujemy"
+      ],
+      "company": {
+        "id": 1,
+        "city": "Gdańsk",
+        "description": "opis",
+        "name": "nazwa"
+      },
       "contract": {
         "mode": "hybrid",
-        "salary": { "from": 10000, "to": 12000 },
+        "salary": {
+          "from": 10000,
+          "to": 12000
+        },
         "type": "contract of employment",
         "workTime": "full-time",
-        "position": { "level": "assistant", "name": "???" },
+        "position": {
+          "level": "assistant",
+          "name": "???"
+        },
         "recruitmentType": "remote"
       },
       "createdAt": "2023-10-20T10:56:10.364Z",
@@ -61,20 +118,228 @@
       "id": 4,
       "title": "Tytuł oferty444",
       "description": "opis ofertt",
-      "requirements": ["wymagania1", "wymagania2"],
-      "responsibilities": ["odpowiedzialnosc1", "odpowiedzialnosc2"],
-      "whatWeOffer": ["nic nie oferujemy"],
-      "company": { "id": 1, "city": "Gdańsk", "description": "opis", "name": "nazwa" },
+      "requirements": [
+        "wymagania1",
+        "wymagania2"
+      ],
+      "responsibilities": [
+        "odpowiedzialnosc1",
+        "odpowiedzialnosc2"
+      ],
+      "whatWeOffer": [
+        "nic nie oferujemy"
+      ],
+      "company": {
+        "id": 1,
+        "city": "Gdańsk",
+        "description": "opis",
+        "name": "nazwa"
+      },
       "contract": {
         "mode": "hybrid",
-        "salary": { "from": 10000, "to": 12000 },
+        "salary": {
+          "from": 10000,
+          "to": 12000
+        },
         "type": "contract of employment",
         "workTime": "full-time",
-        "position": { "level": "assistant", "name": "???" },
+        "position": {
+          "level": "assistant",
+          "name": "???"
+        },
         "recruitmentType": "remote"
       },
       "createdAt": "2023-10-19T10:56:10.364Z",
       "validUntil": "2023-12-21T10:56:10.364Z"
+    },
+    {
+      "title": "Offer111",
+      "description": "fsa",
+      "requirements": "dsad",
+      "responsibilities": "asd",
+      "validUntil": "das",
+      "whatWeOffer": "asd",
+      "company": {
+        "city": "asd",
+        "description": "asd",
+        "name": "asd"
+      },
+      "contract": {
+        "mode": "asd",
+        "salary": {
+          "from": "0asdgsfd",
+          "to": 0
+        }
+      },
+      "id": 5
+    },
+    {
+      "title": "Offer111",
+      "description": "fsa",
+      "requirements": "dsad",
+      "responsibilities": "asd",
+      "validUntil": "das",
+      "whatWeOffer": "asd",
+      "company": {
+        "city": "asd",
+        "description": "asd",
+        "name": "asd"
+      },
+      "contract": {
+        "mode": "asd",
+        "salary": {
+          "from": "1231",
+          "to": "412412"
+        }
+      },
+      "id": 6
+    },
+    {
+      "title": "Offer111",
+      "description": "fsa",
+      "requirements": "dsad",
+      "responsibilities": "asd",
+      "validUntil": "das",
+      "whatWeOffer": "asd",
+      "company": {
+        "city": "asd",
+        "description": "asd",
+        "name": "asd"
+      },
+      "contract": {
+        "mode": "asd",
+        "salary": {
+          "from": "1231",
+          "to": "412412"
+        }
+      },
+      "id": 7
+    },
+    {
+      "title": "Offer111",
+      "description": "fsa",
+      "requirements": "dsad",
+      "responsibilities": "asd",
+      "validUntil": "das",
+      "whatWeOffer": "asd",
+      "company": {
+        "city": "asd",
+        "description": "asd",
+        "name": "asd"
+      },
+      "contract": {
+        "mode": "asd",
+        "salary": {
+          "from": "1231",
+          "to": "412412"
+        }
+      },
+      "id": 8
+    },
+    {
+      "title": "Offer111",
+      "description": "fsa",
+      "requirements": "dsad",
+      "responsibilities": "asd",
+      "validUntil": "das",
+      "whatWeOffer": "asd",
+      "company": {
+        "city": "asd",
+        "description": "asd",
+        "name": "asd"
+      },
+      "contract": {
+        "mode": "asd",
+        "salary": {
+          "from": "1231",
+          "to": "412412"
+        }
+      },
+      "id": 9
+    },
+    {
+      "title": "Offer111",
+      "description": "fsa",
+      "requirements": "dsad",
+      "responsibilities": "asd",
+      "validUntil": "das",
+      "whatWeOffer": "asd",
+      "company": {
+        "city": "asd",
+        "description": "asd",
+        "name": "asd"
+      },
+      "contract": {
+        "mode": "asd",
+        "salary": {
+          "from": "1231",
+          "to": "412412"
+        }
+      },
+      "id": 10
+    },
+    {
+      "title": "Offer111",
+      "description": "fsa",
+      "requirements": "dsad",
+      "responsibilities": "asd",
+      "validUntil": "das",
+      "whatWeOffer": "asd",
+      "company": {
+        "city": "asd",
+        "description": "asd",
+        "name": "asd"
+      },
+      "contract": {
+        "mode": "asd",
+        "salary": {
+          "from": "1231",
+          "to": "412412"
+        }
+      },
+      "id": 11
+    },
+    {
+      "title": "Offer111",
+      "description": "fsa",
+      "requirements": "dsad",
+      "responsibilities": "asd",
+      "validUntil": "das",
+      "whatWeOffer": "asd",
+      "company": {
+        "city": "asd",
+        "description": "asd",
+        "name": "asd"
+      },
+      "contract": {
+        "mode": "asd",
+        "salary": {
+          "from": "1231",
+          "to": "412412"
+        }
+      },
+      "id": 12
+    },
+    {
+      "title": "Offer111",
+      "description": "fsa",
+      "requirements": "dsad",
+      "responsibilities": "asd",
+      "validUntil": "das",
+      "whatWeOffer": "asd",
+      "company": {
+        "city": "asd",
+        "description": "asd",
+        "name": "asd"
+      },
+      "contract": {
+        "mode": "asd",
+        "salary": {
+          "from": "1231",
+          "to": "412412"
+        }
+      },
+      "id": 13
     }
   ],
   "comments": [

@@ -2,9 +2,9 @@ import { Outlet, Route, Routes } from 'react-router-dom';
 import Navigation from './components/navigation/Navigation';
 import CompanyPage from './views/CompanyPage';
 import Home from './views/Home';
-import OfferDetails from './views/OfferDetails';
 import OffersPage from './views/OffersPage';
 import AddOffer from './views/addOffer';
+import OfferDetails from './views/offerDetails/OfferDetails';
 
 function App() {
   return (
