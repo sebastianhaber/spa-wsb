@@ -10,6 +10,7 @@ import { Input } from '../../components/input';
 import { StyledButton } from '../../components/styledButton';
 import { addOffer } from '../../services/addOffer';
 import { FormControl, InputLabel, Select, MenuItem } from '@mui/material';
+import toast from 'react-hot-toast';
 
 const AddOfferForm = () => {
   const [validUntil, setValidUntil] = useState<string | Date | null>(null);
@@ -41,6 +42,7 @@ const AddOfferForm = () => {
   const AddOfferMutation = useMutation(addOffer, {
     onSuccess: (res: any) => {
       console.log('success', res);
+      toast.success('Successfully created!');
     },
   });
 
@@ -105,6 +107,8 @@ const AddOfferForm = () => {
       };
       // console.log(body);
       AddOfferMutation.mutate(body);
+      // toast.success('Successfully created!');
+
     },
   });
 
