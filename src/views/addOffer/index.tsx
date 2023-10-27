@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import AddOfferForm from './AddOfferForm';
+import { theme } from '../../helpers/themes';
 
 const AddOffer = () => {
   return (
@@ -26,6 +27,7 @@ const AddOfferWrapper = styled.div`
   width: 80%;
   max-width: 1200px;
   margin: 0 auto;
+  margin-bottom: 50px;
 `;
 
 const AddOfferHeader = styled.h1`
@@ -38,6 +40,9 @@ const AddOfferContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding-block: 50px;
+  background-color: ${theme.colors.textWhite};
+  border-radius: 10px;
 `;
 
 
