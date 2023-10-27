@@ -65,6 +65,9 @@ const SortOffers = () => {
 
 const StyledWrapper = styled.div`
   position: relative;
+  button span {
+    white-space: nowrap;
+  }
 
   .btn-sort-by {
     display: flex;

@@ -53,6 +53,9 @@ const StyledInput = styled.input`
   box-shadow: inset 0 0 1px transparent;
   border: 0;
 
+  max-width: 300px;
+  width: 100%;
+
   outline: none;
 
   &:hover {

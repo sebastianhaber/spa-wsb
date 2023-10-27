@@ -52,7 +52,7 @@ function App() {
           <Route path="/offers" element={<OffersPage />} />
           <Route path="/offers/:id" element={<OfferDetails />} />
           <Route path="/add-offer" element={<AddOffer />} />
-          <Route path="/company/:id" element={<CompanyPage />} />
+          <Route path="/company/:name" element={<CompanyPage />} />
         </Route>
       </Routes>
     </>
