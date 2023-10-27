@@ -62,9 +62,9 @@ const FilterOffersMenu = () => {
               <input
                 type="checkbox"
                 id="filter-workTime-fulltime"
-                name="workTime=full-time"
+                name="workTime=Full time"
                 onChange={handleChange}
-                defaultChecked={getDefaultChecked('workTime=full-time')}
+                defaultChecked={getDefaultChecked('workTime=Full time')}
               />
               <p>Full time</p>
             </label>
@@ -72,9 +72,9 @@ const FilterOffersMenu = () => {
               <input
                 type="checkbox"
                 id="filter-workTime-parttime"
-                name="workTime=part-time"
+                name="workTime=Part time"
                 onChange={handleChange}
-                defaultChecked={getDefaultChecked('workTime=part-time')}
+                defaultChecked={getDefaultChecked('workTime=Part time')}
               />
               <p>Part time</p>
             </label>
@@ -85,29 +85,29 @@ const FilterOffersMenu = () => {
               <input
                 type="checkbox"
                 id="filter-mode-hybrid"
-                name="mode=hybrid"
+                name="mode=Hybrid"
                 onChange={handleChange}
-                defaultChecked={getDefaultChecked('mode=hybrid')}
+                defaultChecked={getDefaultChecked('mode=Hybrid')}
               />
               <p>Hybrid</p>
             </label>
-            <label htmlFor="filter-mode-home_office">
+            <label htmlFor="filter-mode-in_office">
               <input
                 type="checkbox"
-                id="filter-mode-home_office"
-                name="mode=home office"
+                id="filter-mode-in_office"
+                name="mode=In office"
                 onChange={handleChange}
-                defaultChecked={getDefaultChecked('mode=home office')}
+                defaultChecked={getDefaultChecked('mode=In office')}
               />
-              <p>Home office</p>
+              <p>In office</p>
             </label>
             <label htmlFor="filter-mode-remote">
               <input
                 type="checkbox"
                 id="filter-mode-remote"
-                name="mode=remote"
+                name="mode=Remote"
                 onChange={handleChange}
-                defaultChecked={getDefaultChecked('mode=remote')}
+                defaultChecked={getDefaultChecked('mode=Remote')}
               />
               <p>Remote</p>
             </label>
@@ -118,9 +118,9 @@ const FilterOffersMenu = () => {
               <input
                 type="checkbox"
                 id="filter-type-contract_of_employment"
-                name="type=contract of employment"
+                name="type=Contract of employment"
                 onChange={handleChange}
-                defaultChecked={getDefaultChecked('type=contract of employment')}
+                defaultChecked={getDefaultChecked('type=Contract of employment')}
               />
               <p>Contract of employment</p>
             </label>
@@ -131,11 +131,41 @@ const FilterOffersMenu = () => {
               <input
                 type="checkbox"
                 id="filter-level-assistant"
-                name="level=assistant"
+                name="level=Assistant"
                 onChange={handleChange}
-                defaultChecked={getDefaultChecked('level=assistant')}
+                defaultChecked={getDefaultChecked('level=Assistant')}
               />
               <p>Assistant</p>
+            </label>
+            <label htmlFor="filter-level-junior">
+              <input
+                type="checkbox"
+                id="filter-level-junior"
+                name="level=Junior"
+                onChange={handleChange}
+                defaultChecked={getDefaultChecked('level=Junior')}
+              />
+              <p>Junior</p>
+            </label>
+            <label htmlFor="filter-level-mid">
+              <input
+                type="checkbox"
+                id="filter-level-mid"
+                name="level=Mid"
+                onChange={handleChange}
+                defaultChecked={getDefaultChecked('level=Mid')}
+              />
+              <p>Mid</p>
+            </label>
+            <label htmlFor="filter-level-senior">
+              <input
+                type="checkbox"
+                id="filter-level-senior"
+                name="level=Senior"
+                onChange={handleChange}
+                defaultChecked={getDefaultChecked('level=Senior')}
+              />
+              <p>Senior</p>
             </label>
           </li>
         </ul>
